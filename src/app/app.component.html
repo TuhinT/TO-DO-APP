@@ -1,0 +1,52 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<style>
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        font-family: Monospace;
+        color: darkblue;
+    }
+
+    ul {
+        list-style-position: inside;
+        color: black;
+        text-align: center;
+        font-family: Arial;
+        font-size: 20px;
+        position: relative
+        right: 50px;
+    }
+
+    li {
+        text-align: center;
+        position: relative;
+        right: 50px;
+    }
+
+    #siteInfo {
+        text-align: center;
+        font-size: 20px;
+    }
+</style>
+
+<h1>{{title}}</h1>
+<!--<input #box (keyup.enter)="onEnter(box.value)">-->
+<div id="siteInfo">
+    <input #input type="text" placeholder="Enter reminder" />
+    <button (click)=onEnter(input.value)>Add!</button>
+    <br /><br /><br />
+</div>
+
+<ul>
+    <li *ngFor="let value of values">
+
+
+
+        {{ value }}
+
+        <button (click)=onDelete(value)>Remove!</button>
+        <!--   <button (click)=onEdit()>Edit!</button>-->
+
+    </li>
+</ul>
+
